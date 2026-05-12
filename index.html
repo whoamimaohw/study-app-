@@ -1,1 +1,55 @@
-computer:///Users/allie/Library/Application%20Support/Claude/local-agent-mode-sessions/82383876-51a0-4eb7-bc0f-4f380a8299d5/4ac19148-a35f-460f-bbf3-21d04c232013/agent/local_ditto_4ac19148-a35f-460f-bbf3-21d04c232013/outputs/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Study App</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="notes">Notes</button>
+      <button class="tab-btn" data-tab="quiz">Quiz</button>
+    </nav>
+  </header>
+
+  <section id="notes" class="tab-content active">
+    <h2>My Notes</h2>
+    <div class="note-form">
+      <input type="text" id="note-title" placeholder="Note title..." />
+      <textarea id="note-body" placeholder="Write your note here..."></textarea>
+      <button id="save-note">Save Note</button>
+    </div>
+    <div id="notes-list"></div>
+  </section>
+
+  <section id="quiz" class="tab-content">
+    <h2>Flashcard Quiz</h2>
+    <div class="quiz-form">
+      <h3>Add a Flashcard</h3>
+      <input type="text" id="quiz-question" placeholder="Question..." />
+      <input type="text" id="quiz-answer" placeholder="Answer..." />
+      <button id="add-card">Add Card</button>
+    </div>
+    <div class="quiz-area" id="quiz-area" style="display:none;">
+      <div class="flashcard" id="flashcard">
+        <div class="card-inner" id="card-inner">
+          <div class="card-front" id="card-front"></div>
+          <div class="card-back" id="card-back"></div>
+        </div>
+      </div>
+      <p class="hint">Click card to flip</p>
+      <div class="quiz-controls">
+        <button id="prev-card">Prev</button>
+        <span id="card-counter">0 / 0</span>
+        <button id="next-card">Next</button>
+      </div>
+    </div>
+    <p id="no-cards-msg">No flashcards yet. Add some above!</p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
